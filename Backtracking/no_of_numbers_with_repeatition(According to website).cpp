@@ -77,7 +77,7 @@ long numberOfNumbersWithDuplicates(long num){
 //main code
 
 #include <iostream>
-#include "solution.h"
+//#include "solution.h"
 using namespace std;
 
 int main() {

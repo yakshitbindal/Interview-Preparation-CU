@@ -62,7 +62,7 @@ int subset(int input[], int n, int output[][20]) {
 //main code
 
 #include <iostream>
-#include "solution.h"
+//#include "solution.h"
 using namespace std;
 
 int main() {
