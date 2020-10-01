@@ -8,5 +8,3 @@ This is for students who are preparing for Interview in **C++**.
 * [Recursion.](https://github.com/yakshitbindal/Interview-Preparation-CU/tree/master/Recursion)
 
 [Link to my repository](https://github.com/yakshitbindal/Interview-Preparation-CU.git)
-
-[LinkedIN](https://www.linked.com/in/yakshitbindal)
