@@ -3,7 +3,7 @@
 This is for students who are preparing for Interview in **C++**.
 
 ## **Table of Contents**
-* [Backtracking.](https://github.com/yakshitbindal/Interview-Preparation-CU/Backtracking/)
+* [Backtracking.](https://github.com/yakshitbindal/Interview-Preparation-CU/tree/master/Backtracking/)
 
 [Link to my repository](https://github.com/yakshitbindal/Interview-Preparation-CU.git)
 
