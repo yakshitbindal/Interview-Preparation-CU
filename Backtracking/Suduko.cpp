@@ -22,6 +22,8 @@ true
 
 #include<bits/stdc++.h>
 using namespace std;
+
+
 bool rowCheck(int board[][9],int row,int t)
 {
     for(int i=0;i<9;i++)
@@ -116,6 +118,8 @@ bool helper(int board[][9],int i,int j)
 bool sudokuSolver(int board[][9]){
     return helper(board,0,0);
 }
+
+
 
 //Main Code
 #include<iostream>
