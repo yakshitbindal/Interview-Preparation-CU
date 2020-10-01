@@ -1,6 +1,6 @@
 /*
 Problem statement:
-You will be given a number. Find the no. of numbers grater than the given number.
+You will be given a number(without repeatition). Find the no. of numbers grater than the given number.
 e.g.: 
 input: 4
 3 1 2 4
