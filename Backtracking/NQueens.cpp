@@ -59,7 +59,7 @@ bool isSafe(bool** board,int i,int j,int n)
 bool placeNQueens(bool** board,int i,int n)
 {
     //base case
-    if(i==n)
+    if(i==n) //if we have reached crossed last row then we have to just print the board
     {
         for(int i=0;i<n;i++)
         {
@@ -73,15 +73,22 @@ bool placeNQueens(bool** board,int i,int n)
     }
     
     //recursive call
+    //with for loop we will try for each box to place the queen
     for(int j=0;j<n;j++)
     {
         if(isSafe(board,i,j,n))
         {
-            board[i][j]=1;
-            bool ans=placeNQueens(board,i+1,n);
-            board[i][j]=0;
+            board[i][j]=1;  //now we have placed that queen
+            bool ans=placeNQueens(board,i+1,n); //we will check if rest all cases agree with that position
+            /* for only printing one output
+            if(ans==true)
+                return true; 
+            */
+            //to print all answers we are commenting this part.
+            board[i][j]=0; //if not agreed then we can remove the queen from it's place
         }
     }
+    //if we found no place to put queen
     return false;
 }
 
@@ -111,5 +118,3 @@ int main(){
   placeNQueens(n);
 
 }
-
-
