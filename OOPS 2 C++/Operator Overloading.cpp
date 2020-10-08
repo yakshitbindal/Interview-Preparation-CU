@@ -87,7 +87,6 @@ class Fraction
     {
         numerator+=denominator;
         simplify();
-
         return *this;
     }
 
