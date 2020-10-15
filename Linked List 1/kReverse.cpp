@@ -49,9 +49,69 @@ Sample Output 2 :
 
 */
 
+pair<Node*,Node*> reverse(Node* head,Node* tail)
+{
+    Node* curr=head;
+    Node* prev=NULL;
+    Node* nxt=head->next;
+    while(nxt!=NULL)
+    {
+        curr->next=prev;
+        prev=curr;
+        curr=nxt;
+        nxt=nxt->next;
+    }
+    curr->next=prev;
+    pair<Node*,Node*> p;
+    p.first=curr;
+    p.second=head;
+    return p;
+}
+
+int length(Node* head)
+{
+    int len=0;
+    while(head!=NULL)
+    {
+        len++;
+        head=head->next;
+    }
+    return len;
+}
+
 Node *kReverse(Node *head, int k)
 {
-	
+	if(k==0 || head==NULL || k==1)
+        return head;
+  if(k>=length(head))
+  {
+      return(reverse(head,NULL).first);
+  }
+    int count=0;
+    Node* h1=NULL;
+    Node* t1=NULL;
+    Node* temp=head;
+    while(count!=k)
+    {
+        if(h1==NULL)
+        {
+            h1=temp;
+            t1=temp;
+        }
+        else
+        {
+            t1->next=temp;
+            t1=t1->next;
+        }
+        temp=temp->next;
+        count++;
+    }
+    Node* h2=t1->next;
+    t1->next=NULL;
+    pair<Node*,Node*> p=reverse(h1,t1);
+    Node* remHead=kReverse(h2,k);
+    p.second->next=remHead;
+    return p.first;
 }
 
 //main code
