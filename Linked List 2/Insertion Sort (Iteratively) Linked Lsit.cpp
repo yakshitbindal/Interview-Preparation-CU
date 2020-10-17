@@ -13,11 +13,29 @@ Sample Output 1 :
 
 */
 
-
-
 node* insertion_sort_LinkedList_itr(node* head)
 {
-    
+    int swapped;
+    node *lPtr,*p=head; 
+    node *rPrt = NULL; 
+    do
+    {	
+        swapped = 0;
+        lPtr = head;
+        while(lPtr->next != rPrt)
+        {
+            if (lPtr->data > lPtr->next->data) 
+            {
+                //my_swap(lPtr, lPtr->next); 
+                swap(lPtr->data,lPtr->next->data);
+                swapped = 1; 
+            }
+            lPtr = lPtr->next;
+        }
+        rPrt = lPtr;
+
+    }while(swapped);
+    return p;
 }
 
 //main code
